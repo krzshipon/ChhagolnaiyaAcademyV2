@@ -1,0 +1,31 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textViewStyle">@style/suez_oneTextViewStyle</item>
+        <item name="buttonStyle">@style/suez_oneButtonStyle</item>
+    </style>
+    <style name="toolbar_theme" parent="AppTheme">
+    </style>
+
+    <style name="suez_oneTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:fontFamily">suez_one</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="suez_oneButtonStyle" parent="android:Widget.Holo.Button">
+        <item name="fontFamily">suez_one</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="popup_window_animation">
+
+        <item name="android:windowEnterAnimation">@anim/slide_left_to_right</item>
+        <item name="android:windowExitAnimation">@anim/slide_right_to_left</item>
+    </style>
+
+</resources>
