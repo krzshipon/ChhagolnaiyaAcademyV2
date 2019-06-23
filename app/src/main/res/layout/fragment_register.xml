@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.RegisterFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/registration_title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/include"
+        android:gravity="center_horizontal"
+        android:text="Ex. Student Forum CN Academy"
+        android:textAlignment="center"
+        android:textColor="@color/menu_text_color"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/registration_desc_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/registration_title_tv"
+        android:text="Fill up this to join us"
+        android:textAlignment="center"
+        android:textSize="15sp" />
+
+    <ImageView
+        android:id="@+id/profile_pic_registration"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_below="@id/registration_desc_tv"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/layout_roundshape_bg"
+        android:src="@mipmap/ic_profile_pic" />
+
+    <LinearLayout
+        android:id="@+id/test_"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_pic_registration">
+
+        <ScrollView
+            android:id="@+id/registration_sv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/profile_name_activity_main"
+                    android:layout_width="300dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/layout_bg"
+                    android:drawableRight="@drawable/ic_people_black_24dp"
+                    android:gravity="left"
+                    android:hint="Name"
+                    android:paddingStart="@dimen/edittext_padding_end"
+                    android:paddingEnd="@dimen/edittext_padding_end"
+                    android:singleLine="true"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/fathers_name_activity_main"
+                    android:layout_width="300dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/layout_bg"
+                    android:drawableRight="@drawable/ic_big_moustache"
+                    android:gravity="left"
+                    android:hint="Father's Name"
+                    android:paddingStart="@dimen/edittext_padding_end"
+                    android:paddingEnd="@dimen/edittext_padding_end"
+                    android:singleLine="true"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/mothers_name_activity_main"
+                    android:layout_width="300dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/layout_bg"
+                    android:drawableRight="@drawable/ic_mother_with_daughter"
+                    android:gravity="left"
+                    android:hint="Mother's Name"
+                    android:paddingStart="@dimen/edittext_padding_end"
+                    android:paddingEnd="@dimen/edittext_padding_end"
+                    android:singleLine="true"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/user_email_activity_main"
+                    android:layout_width="300dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/layout_bg"
+                    android:drawableRight="@drawable/ic_email"
+                    android:gravity="left"
+                    android:hint="E-mail"
+                    android:inputType="textEmailAddress"
+                    android:paddingStart="@dimen/edittext_padding_end"
+                    android:paddingEnd="@dimen/edittext_padding_end"
+                    android:singleLine="true"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/user_phone_activity_main"
+                    android:layout_width="300dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/layout_bg"
+                    android:drawableRight="@drawable/ic_phone_contact"
+                    android:gravity="left"
+                    android:hint="Phone"
+                    android:inputType="phone"
+                    android:paddingStart="@dimen/edittext_padding_end"
+                    android:paddingEnd="@dimen/edittext_padding_end"
+                    android:singleLine="true"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/permanent_address_activity_main"
+                    android:layout_width="300dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/layout_bg"
+                    android:drawableRight="@drawable/ic_house"
+                    android:gravity="left"
+                    android:hint="Permanent Address"
+                    android:paddingStart="@dimen/edittext_padding_end"
+                    android:paddingEnd="@dimen/edittext_padding_end"
+                    android:singleLine="true"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/user_nid_activity_main"
+                    android:layout_width="300dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/layout_bg"
+                    android:drawableRight="@drawable/ic_nid"
+                    android:gravity="left"
+                    android:hint="NID No"
+                    android:paddingStart="@dimen/edittext_padding_end"
+                    android:paddingEnd="@dimen/edittext_padding_end"
+                    android:singleLine="true"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/ssc_batch_activity_main"
+                    android:layout_width="300dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/layout_bg"
+                    android:drawableRight="@drawable/ic_students_cap"
+                    android:gravity="left"
+                    android:hint="SSC Batch"
+                    android:paddingStart="@dimen/edittext_padding_end"
+                    android:paddingEnd="@dimen/edittext_padding_end"
+                    android:singleLine="true"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/user_university_activity_main"
+                    android:layout_width="300dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/layout_bg"
+                    android:drawableRight="@drawable/ic_graduate_student_avatar"
+                    android:gravity="left"
+                    android:hint="University"
+                    android:paddingStart="@dimen/edittext_padding_end"
+                    android:paddingEnd="@dimen/edittext_padding_end"
+                    android:singleLine="true"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/user_profession_activity_main"
+                    android:layout_width="300dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/layout_bg"
+                    android:drawableRight="@drawable/ic_job"
+                    android:gravity="left"
+                    android:hint="Profession"
+                    android:paddingStart="@dimen/edittext_padding_end"
+                    android:paddingEnd="@dimen/edittext_padding_end"
+                    android:singleLine="true"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/present_address_activity_main"
+                    android:layout_width="300dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/layout_bg"
+                    android:drawableRight="@drawable/ic_house"
+                    android:gravity="left"
+                    android:hint="Present Address"
+                    android:paddingStart="@dimen/edittext_padding_end"
+                    android:paddingEnd="@dimen/edittext_padding_end"
+                    android:singleLine="true"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/registration_bottom_layout_height"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="@dimen/registration_bottom_layout_margin"
+            android:layout_marginEnd="@dimen/registration_bottom_layout_margin"
+            android:layout_weight="0.5"
+            android:background="@drawable/registration_bottom_text_cancel_bg"
+            android:text="Cancel"
+            android:gravity="center"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/registration_bottom_text_size" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="@dimen/registration_bottom_layout_margin"
+            android:layout_marginEnd="@dimen/registration_bottom_layout_margin"
+            android:layout_weight="0.5"
+            android:background="@drawable/registration_bottom_text_save_bg"
+            android:text="save"
+            android:gravity="center"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/registration_bottom_text_size" />
+    </LinearLayout>
+
+</RelativeLayout>

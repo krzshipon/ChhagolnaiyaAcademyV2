@@ -2,6 +2,9 @@
 
 import android.content.Context;
 import android.os.Build;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -11,9 +14,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
+import com.cyclicsoft.chhagolnaiyaacademy.fragment.RegisterFragment;
 
 
  public class MainActivity extends AppCompatActivity {
@@ -44,7 +49,7 @@ import android.widget.TextView;
         mImageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showDeveloperInfoPopUp();
+                showMennuPopup();
             }
         });
     }
@@ -53,7 +58,7 @@ import android.widget.TextView;
 
 
 
-     private void showDeveloperInfoPopUp() {
+     private void showMennuPopup() {
 
 
          // Inflate the custom layout/view
@@ -98,6 +103,16 @@ import android.widget.TextView;
                  mPopupWindow.dismiss();
              }
          });
+         final LinearLayout registerButton = popupView.findViewById(R.id.layout_register);
+         registerButton.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+                 goToFragment(registerButton);
+             }
+         });
+
+
+
         /*
                     public void showAtLocation (View parent, int gravity, int x, int y)
                         Display the content view in a popup window at the specified location. If the
@@ -115,4 +130,18 @@ import android.widget.TextView;
          // Finally, show the popup window at the center location of root relative layout
          mPopupWindow.showAtLocation(mLinearLayout, Gravity.LEFT, 0, 0);
      }
-}
+
+     private void goToFragment(View view) {
+         Fragment fragment;
+         switch (view.getId()){
+             case R.id.layout_register:
+                 fragment = new RegisterFragment();
+                 FragmentManager fragmentManager = getSupportFragmentManager();
+                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                 fragmentTransaction.replace(R.id.main_fragment_holder, fragment);
+                 fragmentTransaction.addToBackStack(null);
+                 fragmentTransaction.commit();
+         }
+
+     }
+ }
