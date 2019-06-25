@@ -18,6 +18,7 @@ import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
+import com.cyclicsoft.chhagolnaiyaacademy.fragment.MainFragment;
 import com.cyclicsoft.chhagolnaiyaacademy.fragment.RegisterFragment;
 
 
@@ -28,6 +29,7 @@ import com.cyclicsoft.chhagolnaiyaacademy.fragment.RegisterFragment;
      private PopupWindow mPopupWindow;
      private View mLinearLayout;
      private ImageButton mImageButton;
+     Fragment fragment;
 
      @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +54,31 @@ import com.cyclicsoft.chhagolnaiyaacademy.fragment.RegisterFragment;
                 showMennuPopup();
             }
         });
+         // Check that the activity is using the layout version with
+         // the fragment_container FrameLayout
+         if (findViewById(R.id.fragment_container) != null) {
+
+             // However, if we're being restored from a previous state,
+             // then we don't need to do anything and should return or else
+             // we could end up with overlapping fragments.
+             if (savedInstanceState != null) {
+                 return;
+             }
+
+             // Create a new Fragment to be placed in the activity layout
+              fragment = new MainFragment();
+
+             // In case this activity was started with special instructions from an
+             // Intent, pass the Intent's extras to the fragment as arguments
+             fragment.setArguments(getIntent().getExtras());
+
+             // Add the fragment to the 'fragment_container' FrameLayout
+             getSupportFragmentManager().beginTransaction()
+                     .add(R.id.fragment_container, fragment).commit();
+         }
+
+
+
     }
 
 
@@ -108,6 +135,7 @@ import com.cyclicsoft.chhagolnaiyaacademy.fragment.RegisterFragment;
              @Override
              public void onClick(View v) {
                  goToFragment(registerButton);
+                 mPopupWindow.dismiss();
              }
          });
 
@@ -132,15 +160,18 @@ import com.cyclicsoft.chhagolnaiyaacademy.fragment.RegisterFragment;
      }
 
      private void goToFragment(View view) {
-         Fragment fragment;
          switch (view.getId()){
              case R.id.layout_register:
                  fragment = new RegisterFragment();
-                 FragmentManager fragmentManager = getSupportFragmentManager();
-                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                 fragmentTransaction.replace(R.id.main_fragment_holder, fragment);
-                 fragmentTransaction.addToBackStack(null);
-                 fragmentTransaction.commit();
+
+                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                 // Replace whatever is in the fragment_container view with this fragment,
+                 // and add the transaction to the back stack so the user can navigate back
+                 transaction.replace(R.id.fragment_container, fragment);
+                 transaction.addToBackStack(null);
+                 // Commit the transaction
+                 transaction.commit();
+
          }
 
      }

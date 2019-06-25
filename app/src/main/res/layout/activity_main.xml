@@ -11,12 +11,10 @@
         android:id="@+id/include"
         layout="@layout/toolbar" />
 
-    <fragment
-        android:id="@+id/main_fragment_holder"
-        android:name="com.cyclicsoft.chhagolnaiyaacademy.fragment.MainFragment"
+    <FrameLayout
+        android:id="@+id/fragment_container"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
