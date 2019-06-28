@@ -1,9 +1,7 @@
  package com.cyclicsoft.chhagolnaiyaacademy;
 
 import android.content.Context;
-import android.os.Build;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -51,7 +49,7 @@ import com.cyclicsoft.chhagolnaiyaacademy.fragment.RegisterFragment;
         mImageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showMennuPopup();
+                showMenuPopup();
             }
         });
          // Check that the activity is using the layout version with
@@ -82,10 +80,10 @@ import com.cyclicsoft.chhagolnaiyaacademy.fragment.RegisterFragment;
     }
 
 
-
-
-
-     private void showMennuPopup() {
+     /**
+      *
+      */
+     private void showMenuPopup() {
 
 
          // Inflate the custom layout/view
@@ -163,7 +161,6 @@ import com.cyclicsoft.chhagolnaiyaacademy.fragment.RegisterFragment;
          switch (view.getId()){
              case R.id.layout_register:
                  fragment = new RegisterFragment();
-
                  FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
                  // Replace whatever is in the fragment_container view with this fragment,
                  // and add the transaction to the back stack so the user can navigate back

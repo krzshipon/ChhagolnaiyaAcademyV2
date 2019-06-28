@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragment.RegisterFragment">
-
     <!-- TODO: Update blank fragment layout -->
 
     <TextView
@@ -58,7 +57,7 @@
                 android:orientation="vertical">
 
                 <EditText
-                    android:id="@+id/profile_name_activity_main"
+                    android:id="@+id/profile_name_fragment_register"
                     android:layout_width="300dp"
                     android:layout_height="40dp"
                     android:layout_margin="5dp"
@@ -73,7 +72,7 @@
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/fathers_name_activity_main"
+                    android:id="@+id/fathers_name_fragment_register"
                     android:layout_width="300dp"
                     android:layout_height="40dp"
                     android:layout_margin="5dp"
@@ -88,7 +87,7 @@
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/mothers_name_activity_main"
+                    android:id="@+id/mothers_name_fragment_register"
                     android:layout_width="300dp"
                     android:layout_height="40dp"
                     android:layout_margin="5dp"
@@ -103,7 +102,7 @@
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/user_email_activity_main"
+                    android:id="@+id/user_email_fragment_register"
                     android:layout_width="300dp"
                     android:layout_height="40dp"
                     android:layout_margin="5dp"
@@ -118,7 +117,7 @@
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/user_phone_activity_main"
+                    android:id="@+id/user_phone_fragment_register"
                     android:layout_width="300dp"
                     android:layout_height="40dp"
                     android:layout_margin="5dp"
@@ -133,7 +132,7 @@
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/permanent_address_activity_main"
+                    android:id="@+id/permanent_address_fragment_register"
                     android:layout_width="300dp"
                     android:layout_height="40dp"
                     android:layout_margin="5dp"
@@ -148,7 +147,7 @@
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/user_nid_activity_main"
+                    android:id="@+id/user_nid_fragment_register"
                     android:layout_width="300dp"
                     android:layout_height="40dp"
                     android:layout_margin="5dp"
@@ -163,7 +162,7 @@
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/ssc_batch_activity_main"
+                    android:id="@+id/ssc_batch_fragment_register"
                     android:layout_width="300dp"
                     android:layout_height="40dp"
                     android:layout_margin="5dp"
@@ -178,7 +177,7 @@
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/user_university_activity_main"
+                    android:id="@+id/user_university_fragment_register"
                     android:layout_width="300dp"
                     android:layout_height="40dp"
                     android:layout_margin="5dp"
@@ -192,7 +191,7 @@
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/user_profession_activity_main"
+                    android:id="@+id/user_profession_fragment_register"
                     android:layout_width="300dp"
                     android:layout_height="40dp"
                     android:layout_margin="5dp"
@@ -206,7 +205,7 @@
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/present_address_activity_main"
+                    android:id="@+id/present_address_fragment_register"
                     android:layout_width="300dp"
                     android:layout_height="40dp"
                     android:layout_margin="5dp"

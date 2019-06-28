@@ -9,6 +9,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.cyclicsoft.chhagolnaiyaacademy.R;
@@ -21,7 +22,7 @@ import com.cyclicsoft.chhagolnaiyaacademy.R;
  * Use the {@link RegisterFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class RegisterFragment extends Fragment {
+public class RegisterFragment extends Fragment implements View.OnClickListener {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -33,6 +34,8 @@ public class RegisterFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
     private TextView saveButton, cancelButton;
+
+    private EditText mETName, mETFathersName, mETMothersName, mETEmail, mETPhone, mEtPAddress, mEtNID, mEtSSC, mEtUniversity, mEtProfess, mEtPrAdd;
 
     public RegisterFragment() {
         // Required empty public constructor
@@ -75,15 +78,31 @@ public class RegisterFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        // Fields initialization
+        initUi(view);
+
+        cancelButton.setOnClickListener(this);
+        saveButton.setOnClickListener(this);
+    }
+
+
+    private void initUi(View view) {
+        //Buttons
         saveButton = view.findViewById(R.id.tv_button_register_save);
         cancelButton = view.findViewById(R.id.tv_button_register_cancel);
-        cancelButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getActivity().onBackPressed();
-            }
-        });
 
+        //Fields
+        mETName = view.findViewById(R.id.profile_name_fragment_register);
+        mETFathersName = view.findViewById(R.id.fathers_name_fragment_register);
+        mETMothersName = view.findViewById(R.id.mothers_name_fragment_register);
+        mETEmail = view.findViewById(R.id.user_email_fragment_register);
+        mEtNID = view.findViewById(R.id.user_nid_fragment_register);
+        mETPhone = view.findViewById(R.id.user_phone_fragment_register);
+        mEtPAddress = view.findViewById(R.id.present_address_fragment_register);
+        mEtSSC = view.findViewById(R.id.ssc_batch_fragment_register);
+        mEtUniversity = view.findViewById(R.id.user_university_fragment_register);
+        mEtPrAdd = view.findViewById(R.id.present_address_fragment_register);
+        mEtProfess = view.findViewById(R.id.user_profession_fragment_register);
 
     }
 
@@ -99,6 +118,24 @@ public class RegisterFragment extends Fragment {
     public void onDetach() {
         super.onDetach();
         mListener = null;
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.tv_button_register_save:
+                saveDataToFirebase();
+                break;
+            case R.id.tv_button_register_cancel:
+                getActivity().onBackPressed();
+                break;
+
+
+        }
+    }
+
+    private void saveDataToFirebase() {
+
     }
 
     /**

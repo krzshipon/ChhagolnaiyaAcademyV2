@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1064914112078",
+    "firebase_url": "https://cn-academy.firebaseio.com",
+    "project_id": "cn-academy",
+    "storage_bucket": "cn-academy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1064914112078:android:949fa175a6a15553",
+        "android_client_info": {
+          "package_name": "com.cyclicsoft.chhagolnaiyaacademy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1064914112078-t5jicr1r3ssfvkdcfs4j3j2j7jaok2st.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cyclicsoft.chhagolnaiyaacademy",
+            "certificate_hash": "4f8a2ae8f7707544ce20c16f74d0eea5124e09d4"
+          }
+        },
+        {
+          "client_id": "1064914112078-6om0iun7ajim8cdj905rgfh0b4u54iq7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVfSITE68OQh-vQVcCWvHnAB2XijIt8bI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1064914112078-6om0iun7ajim8cdj905rgfh0b4u54iq7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
