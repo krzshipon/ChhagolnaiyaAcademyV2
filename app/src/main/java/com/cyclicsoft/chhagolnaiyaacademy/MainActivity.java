@@ -18,6 +18,7 @@ import android.widget.TextView;
 
 import com.cyclicsoft.chhagolnaiyaacademy.fragment.MainFragment;
 import com.cyclicsoft.chhagolnaiyaacademy.fragment.RegisterFragment;
+import com.google.firebase.auth.FirebaseAuth;
 
 
  public class MainActivity extends AppCompatActivity {
@@ -28,6 +29,7 @@ import com.cyclicsoft.chhagolnaiyaacademy.fragment.RegisterFragment;
      private View mLinearLayout;
      private ImageButton mImageButton;
      Fragment fragment;
+     private FirebaseAuth auth;
 
      @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +42,9 @@ import com.cyclicsoft.chhagolnaiyaacademy.fragment.RegisterFragment;
             setSupportActionBar(toolbar);
         }
 
+
+         //Get Firebase auth instance
+         auth = FirebaseAuth.getInstance();
         mContext = getApplicationContext();
         // Initialize a new instance of LayoutInflater service
         inflater = (LayoutInflater) mContext
@@ -120,6 +125,7 @@ import com.cyclicsoft.chhagolnaiyaacademy.fragment.RegisterFragment;
          // Get a reference for the custom view close button
          ImageView closeButton =  popupView.findViewById(R.id.button_backspace);
 
+
          // Set a click listener for the popup window close button
          closeButton.setOnClickListener(new View.OnClickListener() {
              @Override
@@ -129,6 +135,14 @@ import com.cyclicsoft.chhagolnaiyaacademy.fragment.RegisterFragment;
              }
          });
          final LinearLayout registerButton = popupView.findViewById(R.id.layout_register);
+         final LinearLayout logoutButton = popupView.findViewById(R.id.layout_logout);
+         logoutButton.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+                auth.signOut();
+                finish();
+             }
+         });
          registerButton.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
